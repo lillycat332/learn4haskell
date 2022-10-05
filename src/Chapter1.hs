@@ -575,7 +575,7 @@ False
 -}
 
 isVowel :: Char -> Bool
-isVowel c = (toLower c) `elem` vowels = True
+isVowel c = (toLower c) `elem` vowels
   where vowels = "aeiou"
 
 {- |
