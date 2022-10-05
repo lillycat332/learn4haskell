@@ -577,10 +577,6 @@ False
 isVowel :: Char -> Bool
 isVowel c = (toLower c) `elem` vowels = True
   where vowels = "aeiou"
-  
--- or ✨
-isVowel' c | c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' = True
- | otherwise = False
 
 {- |
 == Local variables and functions
