@@ -140,7 +140,7 @@ List of booleans:
 
 String is a list of characters:
 >>> :t "some string"
-"some string" :: String
+"some string" :: [Char]
 
 Empty list:
 >>> :t []
@@ -160,7 +160,7 @@ reverse :: [a] -> [a]
 
 Take first N elements of a list:
 >>> :t take
-ake :: Int -> [a] -> [a]
+take :: Int -> [a] -> [a]
 
 Create a list from N same elements:
 >>> :t replicate
@@ -347,7 +347,7 @@ from it!
 ghci> :l src/Chapter2.hs
 -}
 subList :: Int -> Int -> [a] -> [a]
-subList a b xs = drop a . take b $ xs 
+subList a b xs = drop a . take (b + 1) $ xs 
 
 {- |
 =⚔️= Task 4
@@ -515,7 +515,7 @@ False
 -}
 
 isThird42 :: Integral a => [a] -> Bool
-isThird42 (_ : x : _) = x == 42
+isThird42 (_ : _ : x : _) = x == 42
 isThird42 _ = False
 
 
